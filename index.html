@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Forge Tap</title>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 100%; height: 100%; overflow: hidden; background: #0f0f1a; }
+      body { display: flex; justify-content: center; align-items: center; }
+      #game-container {
+        width: 390px;
+        height: 844px;
+        max-height: 100vh;
+        max-width: calc(100vh * 390 / 844);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 0 40px rgba(233, 69, 96, 0.15);
+      }
+      #game-container canvas { touch-action: none; display: block; }
+      @media (max-width: 500px) {
+        #game-container { width: 100%; height: 100%; max-width: 100%; border-radius: 0; box-shadow: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game-container"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
